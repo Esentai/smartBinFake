@@ -41,11 +41,10 @@ const vm = new Vue({
         func: function(){
             console.log("work")
             var updates = {}; 
-            setTimeout(() => {
-                updates['1/completeness'] = this.$data.k;
-                database.ref().update(updates);
-                this.$data.k += 6;
-            },500);
+            updates['1/completeness'] = this.$data.k;
+            database.ref().update(updates);
+            this.$data.k += 6;
+        
            
 
         },
